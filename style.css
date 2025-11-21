@@ -466,40 +466,50 @@ footer {
   border-top: 1px solid #1ca3ec;
 }
 
-/* RESPONSIVE */
-@media(max-width: 768px){
+/* TABLET VIEW (up to 768px) */
+@media (max-width: 768px) {
   .about-card {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
-  .timeline-wrap, .timeline-edu {
+
+  .timeline-wrap,
+  .timeline-edu {
     margin-left: 0;
     padding-left: 0;
   }
+
   .timeline-dot {
     left: -10px;
   }
+
   .education-grid {
     flex-direction: column;
     align-items: center;
   }
-
-/* --- MOBILE RESPONSIVENESS (Add this to style.css) --- */
-@media screen and (max-width: 600px) {
-    .about-card {
-        flex-direction: column; 
-        padding: 15px; 
-    }
-    .about-left, .about-right {
-        width: 100%;
-        margin-bottom: 20px; 
-    }
-    .profile-frame img {
-        width: 100%;
-        height: auto;
-    }
-    .about-right {
-        text-align: center; 
-    }
 }
+
+/* MOBILE VIEW (up to 600px) */
+@media screen and (max-width: 600px) {
+  .about-card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-right {
+    text-align: center;
+  }
 }
