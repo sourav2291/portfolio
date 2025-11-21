@@ -10,8 +10,8 @@
 
 /* BODY */
 body {
-  background: #0a0f1a; /* dark black-blue background */
-  color: #cfd8e5; /* soft light text */
+  background: #0a0f1a;
+  color: #cfd8e5;
   line-height: 1.6;
 }
 
@@ -97,7 +97,7 @@ body {
   text-shadow: 0 0 12px #1ca3ec, 0 0 25px #1ca3ec;
 }
 
-/* TYPING DESIGNATION ANIMATION */
+/* TYPING ANIMATION */
 .typing-roles {
   font-size: 24px;
   margin-bottom: 30px;
@@ -173,6 +173,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+  width: 100%;
 }
 
 .about-left {
@@ -271,11 +272,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(28,163,236,0.2);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s; /* add transform transition */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.05); /* same as education hover */
+  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 0 25px rgba(28,163,236,0.7);
 }
 
@@ -299,7 +300,7 @@ body {
   font-size: 12px;
 }
 
-/* EXPERIENCE CARDS WITH BOXES AND ANIMATION */
+/* EXPERIENCE */
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -336,34 +337,17 @@ body {
   margin-bottom: 8px;
 }
 
-/* Animation Keyframes */
 @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Stagger animation for multiple cards */
 .experience-card:nth-child(1) { animation-delay: 0.2s; }
 .experience-card:nth-child(2) { animation-delay: 0.4s; }
 .experience-card:nth-child(3) { animation-delay: 0.6s; }
 .experience-card:nth-child(4) { animation-delay: 0.8s; }
 
-/* RESPONSIVE */
-@media(max-width: 768px){
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* EDUCATION CARDS */
+/* EDUCATION */
 .education-grid {
   display: flex;
   flex-wrap: wrap;
@@ -374,7 +358,7 @@ body {
 
 .edu-card {
   background: #0f182b;
-  flex: 1 1 400px; /* 2 cards side by side */
+  flex: 1 1 400px;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(28,163,236,0.2);
@@ -466,22 +450,19 @@ footer {
   border-top: 1px solid #1ca3ec;
 }
 
-/* TABLET VIEW (up to 768px) */
+/* RESPONSIVE TABLET */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar-nav {
+    display: none; /* hide menu if no hamburger */
+  }
+
   .about-card {
-    display: flex;
     flex-direction: column;
     text-align: center;
-  }
-
-  .timeline-wrap,
-  .timeline-edu {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .timeline-dot {
-    left: -10px;
   }
 
   .education-grid {
@@ -490,10 +471,9 @@ footer {
   }
 }
 
-/* MOBILE VIEW (up to 600px) */
+/* RESPONSIVE MOBILE */
 @media screen and (max-width: 600px) {
   .about-card {
-    display: flex;
     flex-direction: column;
     padding: 15px;
   }
